@@ -288,3 +288,216 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 !ENTRY com.atollic.truestudio.productmanager 1 0 2021-11-16 14:05:48.761
 !MESSAGE Unloading product manager
+!SESSION 2022-01-02 15:41:41.197 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_181
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Framework arguments:  D:\Projects\Embedded Systems\Repo\Mortal Kombat\Mortal Kombat\.cproject
+Command-line arguments:  -os win32 -ws win32 -arch x86 D:\Projects\Embedded Systems\Repo\Mortal Kombat\Mortal Kombat\.cproject
+
+!ENTRY com.atollic.truestudio.productmanager 1 0 2022-01-02 15:41:51.982
+!MESSAGE Loading product manager
+
+!ENTRY com.atollic.truestudio.productmanager 1 0 2022-01-02 15:41:51.987
+!MESSAGE OS info: Windows 10, 10.0, x86
+
+!ENTRY TrueSTUDIO 1 0 2022-01-02 15:41:52.550
+!MESSAGE Target: STM32, Version: 9.3.0, Build date: 20190212-0734, Installation dir: /C:/Program Files (x86)/Atollic/TrueSTUDIO for STM32 9.3.0/ide/
+
+!ENTRY TrueSTUDIO 1 0 2022-01-02 15:41:52.550
+!MESSAGE Workspace: D:\Projects\Embedded Systems\Repo\Atollic_Projects
+
+!ENTRY org.eclipse.jface 2 0 2022-01-02 15:41:53.343
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-01-02 15:41:53.343
+!MESSAGE A conflict occurred for ALT+CTRL+T:
+Binding(ALT+CTRL+T,
+	ParameterizedCommand(Command(org.eclipse.team.svn.ui.command.EditPropertiesCommand,Show Properties,
+		,
+		Category(org.eclipse.team.svn.ui.command.category,SVN,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@8fe8ad,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+CTRL+T,
+	ParameterizedCommand(Command(org.eclipse.tm.terminal.connector.local.command.launch,Open Local Terminal on Selection,
+		,
+		Category(org.eclipse.tm.terminal.view.ui.commands.category,Terminal Commands,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1d6262c,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY com.atollic.truestudio.integration.processorexpert 0 0 2022-01-02 15:41:56.040
+!MESSAGE Atollic TrueSTUDIO Processor Expert integration is up.
+
+!ENTRY edu.hawaii.ics.csdl.jupiter 1 0 2022-01-02 15:41:56.052
+!MESSAGE Code Review is up.
+
+!ENTRY org.eclipse.egit.ui 2 0 2022-01-02 15:41:56.198
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\arul2'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY com.atollic.truestudio.mbs 2 0 2022-01-02 15:41:57.113
+!MESSAGE Mortal Kombat needs property 'com.atollic.truestudio.general.runtimelib.2070321123' fixed. Fixing to 'com.atollic.truestudio.ld.general.clib.small'.
+
+!ENTRY com.atollic.truestudio.mbs 2 0 2022-01-02 15:41:57.114
+!MESSAGE Mortal Kombat needs property 'com.atollic.truestudio.toolchain_options.mcu.804242881' fixed. Fixing to 'STM32F750N8'.
+
+!ENTRY com.atollic.truestudio.mbs 2 0 2022-01-02 15:41:57.115
+!MESSAGE Mortal Kombat needs property 'com.atollic.truestudio.toolchain_options.vendor.1303690617' fixed. Fixing to 'STMicroelectronics'.
+
+!ENTRY com.atollic.truestudio.mbs 2 0 2022-01-02 15:41:57.152
+!MESSAGE Mortal Kombat needs property 'com.atollic.truestudio.general.runtimelib.976395159' fixed. Fixing to 'com.atollic.truestudio.ld.general.clib.small'.
+
+!ENTRY com.atollic.truestudio.mbs 2 0 2022-01-02 15:41:57.153
+!MESSAGE Mortal Kombat needs property 'com.atollic.truestudio.toolchain_options.mcu.12844182' fixed. Fixing to 'STM32F750N8'.
+
+!ENTRY com.atollic.truestudio.mbs 2 0 2022-01-02 15:41:57.153
+!MESSAGE Mortal Kombat needs property 'com.atollic.truestudio.toolchain_options.vendor.387705458' fixed. Fixing to 'STMicroelectronics'.
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-01-02 15:42:01.726
+!MESSAGE Indexed 'Mortal Kombat' (65 sources, 145 headers) in 4.52 sec: 17,348 declarations; 119,574 references; 8 unresolved inclusions; 437 syntax errors; 3,595 unresolved names (2.6%)
+
+!ENTRY org.eclipse.ui 4 4 2022-01-02 15:46:21.707
+!MESSAGE Referenced part does not exist yet: org.eclipse.ui.views.TaskList.
+
+!ENTRY com.atollic.hardwaredebug.launch 2 0 2022-01-02 23:24:16.901
+!MESSAGE Won't launch debug session since we failed to locate the binary.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2022-01-02 23:43:23.444
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.mi.service.MIRunControl$9@1c4b1f4): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Context cannot be suspended. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2022-01-02 23:43:23.444
+!MESSAGE Context cannot be suspended.
+
+!ENTRY com.atollic.truestudio.productmanager 1 0 2022-01-03 00:09:16.380
+!MESSAGE Unloading product manager
+!SESSION 2022-01-03 11:14:00.441 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_181
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY com.atollic.truestudio.productmanager 1 0 2022-01-03 11:14:03.787
+!MESSAGE Loading product manager
+
+!ENTRY com.atollic.truestudio.productmanager 1 0 2022-01-03 11:14:03.798
+!MESSAGE OS info: Windows 10, 10.0, x86
+
+!ENTRY TrueSTUDIO 1 0 2022-01-03 11:14:05.308
+!MESSAGE Target: STM32, Version: 9.3.0, Build date: 20190212-0734, Installation dir: /C:/Program Files (x86)/Atollic/TrueSTUDIO for STM32 9.3.0/ide/
+
+!ENTRY TrueSTUDIO 1 0 2022-01-03 11:14:05.308
+!MESSAGE Workspace: D:\Projects\Embedded Systems\Repo\Atollic_Projects
+
+!ENTRY org.eclipse.jface 2 0 2022-01-03 11:14:07.423
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-01-03 11:14:07.423
+!MESSAGE A conflict occurred for ALT+CTRL+T:
+Binding(ALT+CTRL+T,
+	ParameterizedCommand(Command(org.eclipse.team.svn.ui.command.EditPropertiesCommand,Show Properties,
+		,
+		Category(org.eclipse.team.svn.ui.command.category,SVN,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1525e13,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+CTRL+T,
+	ParameterizedCommand(Command(org.eclipse.tm.terminal.connector.local.command.launch,Open Local Terminal on Selection,
+		,
+		Category(org.eclipse.tm.terminal.view.ui.commands.category,Terminal Commands,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1404a3c,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY com.atollic.truestudio.integration.processorexpert 0 0 2022-01-03 11:14:11.861
+!MESSAGE Atollic TrueSTUDIO Processor Expert integration is up.
+
+!ENTRY edu.hawaii.ics.csdl.jupiter 1 0 2022-01-03 11:14:11.875
+!MESSAGE Code Review is up.
+
+!ENTRY org.eclipse.egit.ui 2 0 2022-01-03 11:14:12.155
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\arul2'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.debug.core 4 5012 2022-01-03 15:23:40.711
+!MESSAGE Breakpoint does not have an associated marker.
+
+!ENTRY com.atollic.truestudio.productmanager 1 0 2022-01-03 15:38:45.089
+!MESSAGE Unloading product manager
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2022-01-03 15:38:45.218
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.mi.service.MIRunControl$9@1169f15): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Context cannot be suspended. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2022-01-03 15:38:45.218
+!MESSAGE Context cannot be suspended.
+
+!ENTRY org.eclipse.core.resources 2 10035 2022-01-03 15:38:45.285
+!MESSAGE The workspace will exit with unsaved changes in this session.
+
+!ENTRY org.eclipse.core.jobs 2 2 2022-01-03 15:38:45.627
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.debug.core.DebugPlugin$EventDispatchJob
+!SESSION 2022-01-03 15:38:57.215 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_181
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Framework arguments:  D:\Projects\Embedded Systems\Repo\Mortal Kombat\Mortal Kombat\.cproject
+Command-line arguments:  -os win32 -ws win32 -arch x86 D:\Projects\Embedded Systems\Repo\Mortal Kombat\Mortal Kombat\.cproject
+
+!ENTRY com.atollic.truestudio.productmanager 1 0 2022-01-03 15:38:59.449
+!MESSAGE Loading product manager
+
+!ENTRY com.atollic.truestudio.productmanager 1 0 2022-01-03 15:38:59.455
+!MESSAGE OS info: Windows 10, 10.0, x86
+
+!ENTRY org.eclipse.core.resources 2 10035 2022-01-03 15:38:59.546
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY TrueSTUDIO 1 0 2022-01-03 15:39:00.196
+!MESSAGE Target: STM32, Version: 9.3.0, Build date: 20190212-0734, Installation dir: /C:/Program Files (x86)/Atollic/TrueSTUDIO for STM32 9.3.0/ide/
+
+!ENTRY TrueSTUDIO 1 0 2022-01-03 15:39:00.196
+!MESSAGE Workspace: D:\Projects\Embedded Systems\Repo\Atollic_Projects
+
+!ENTRY org.eclipse.jface 2 0 2022-01-03 15:39:01.105
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-01-03 15:39:01.105
+!MESSAGE A conflict occurred for ALT+CTRL+T:
+Binding(ALT+CTRL+T,
+	ParameterizedCommand(Command(org.eclipse.team.svn.ui.command.EditPropertiesCommand,Show Properties,
+		,
+		Category(org.eclipse.team.svn.ui.command.category,SVN,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@165dd88,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+CTRL+T,
+	ParameterizedCommand(Command(org.eclipse.tm.terminal.connector.local.command.launch,Open Local Terminal on Selection,
+		,
+		Category(org.eclipse.tm.terminal.view.ui.commands.category,Terminal Commands,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@21588e,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY com.atollic.truestudio.integration.processorexpert 0 0 2022-01-03 15:39:03.966
+!MESSAGE Atollic TrueSTUDIO Processor Expert integration is up.
+
+!ENTRY edu.hawaii.ics.csdl.jupiter 1 0 2022-01-03 15:39:04.120
+!MESSAGE Code Review is up.
+
+!ENTRY org.eclipse.egit.ui 2 0 2022-01-03 15:39:04.483
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\arul2'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.

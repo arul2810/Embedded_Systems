@@ -1,0 +1,7 @@
+20:37:56 **** Incremental Build of configuration Debug for project Mortal Kombat ****
+Info: Internal Builder is used for build
+arm-atollic-eabi-objcopy.exe -O ihex Mortal Kombat.elf Mortal Kombat.hex 
+Info: Parallel threads used: 0
+
+20:37:56 Build Finished (took 192ms)
+

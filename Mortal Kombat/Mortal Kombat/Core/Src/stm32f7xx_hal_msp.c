@@ -60,7 +60,7 @@
 /* USER CODE END 0 */
 
 void HAL_TIM_MspPostInit(TIM_HandleTypeDef *htim);
-                                                                                                    /**
+                    /**
   * Initializes the Global MSP.
   */
 void HAL_MspInit(void)
@@ -158,50 +158,6 @@ void HAL_ADC_MspDeInit(ADC_HandleTypeDef* hadc)
   /* USER CODE BEGIN ADC3_MspDeInit 1 */
 
   /* USER CODE END ADC3_MspDeInit 1 */
-  }
-
-}
-
-/**
-* @brief CRC MSP Initialization
-* This function configures the hardware resources used in this example
-* @param hcrc: CRC handle pointer
-* @retval None
-*/
-void HAL_CRC_MspInit(CRC_HandleTypeDef* hcrc)
-{
-  if(hcrc->Instance==CRC)
-  {
-  /* USER CODE BEGIN CRC_MspInit 0 */
-
-  /* USER CODE END CRC_MspInit 0 */
-    /* Peripheral clock enable */
-    __HAL_RCC_CRC_CLK_ENABLE();
-  /* USER CODE BEGIN CRC_MspInit 1 */
-
-  /* USER CODE END CRC_MspInit 1 */
-  }
-
-}
-
-/**
-* @brief CRC MSP De-Initialization
-* This function freeze the hardware resources used in this example
-* @param hcrc: CRC handle pointer
-* @retval None
-*/
-void HAL_CRC_MspDeInit(CRC_HandleTypeDef* hcrc)
-{
-  if(hcrc->Instance==CRC)
-  {
-  /* USER CODE BEGIN CRC_MspDeInit 0 */
-
-  /* USER CODE END CRC_MspDeInit 0 */
-    /* Peripheral clock disable */
-    __HAL_RCC_CRC_CLK_DISABLE();
-  /* USER CODE BEGIN CRC_MspDeInit 1 */
-
-  /* USER CODE END CRC_MspDeInit 1 */
   }
 
 }
@@ -377,105 +333,6 @@ void HAL_DMA2D_MspDeInit(DMA2D_HandleTypeDef* hdma2d)
   /* USER CODE BEGIN DMA2D_MspDeInit 1 */
 
   /* USER CODE END DMA2D_MspDeInit 1 */
-  }
-
-}
-
-/**
-* @brief ETH MSP Initialization
-* This function configures the hardware resources used in this example
-* @param heth: ETH handle pointer
-* @retval None
-*/
-void HAL_ETH_MspInit(ETH_HandleTypeDef* heth)
-{
-  GPIO_InitTypeDef GPIO_InitStruct = {0};
-  if(heth->Instance==ETH)
-  {
-  /* USER CODE BEGIN ETH_MspInit 0 */
-
-  /* USER CODE END ETH_MspInit 0 */
-    /* Peripheral clock enable */
-    __HAL_RCC_ETH_CLK_ENABLE();
-
-    __HAL_RCC_GPIOG_CLK_ENABLE();
-    __HAL_RCC_GPIOC_CLK_ENABLE();
-    __HAL_RCC_GPIOA_CLK_ENABLE();
-    /**ETH GPIO Configuration
-    PG14     ------> ETH_TXD1
-    PG13     ------> ETH_TXD0
-    PG11     ------> ETH_TX_EN
-    PC1     ------> ETH_MDC
-    PA1     ------> ETH_REF_CLK
-    PC4     ------> ETH_RXD0
-    PA2     ------> ETH_MDIO
-    PC5     ------> ETH_RXD1
-    PA7     ------> ETH_CRS_DV
-    */
-    GPIO_InitStruct.Pin = RMII_TXD1_Pin|RMII_TXD0_Pin|RMII_TX_EN_Pin;
-    GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
-    GPIO_InitStruct.Pull = GPIO_NOPULL;
-    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
-    GPIO_InitStruct.Alternate = GPIO_AF11_ETH;
-    HAL_GPIO_Init(GPIOG, &GPIO_InitStruct);
-
-    GPIO_InitStruct.Pin = RMII_MDC_Pin|RMII_RXD0_Pin|RMII_RXD1_Pin;
-    GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
-    GPIO_InitStruct.Pull = GPIO_NOPULL;
-    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
-    GPIO_InitStruct.Alternate = GPIO_AF11_ETH;
-    HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
-
-    GPIO_InitStruct.Pin = RMII_REF_CLK_Pin|RMII_MDIO_Pin|RMII_CRS_DV_Pin;
-    GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
-    GPIO_InitStruct.Pull = GPIO_NOPULL;
-    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
-    GPIO_InitStruct.Alternate = GPIO_AF11_ETH;
-    HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
-
-  /* USER CODE BEGIN ETH_MspInit 1 */
-
-  /* USER CODE END ETH_MspInit 1 */
-  }
-
-}
-
-/**
-* @brief ETH MSP De-Initialization
-* This function freeze the hardware resources used in this example
-* @param heth: ETH handle pointer
-* @retval None
-*/
-void HAL_ETH_MspDeInit(ETH_HandleTypeDef* heth)
-{
-  if(heth->Instance==ETH)
-  {
-  /* USER CODE BEGIN ETH_MspDeInit 0 */
-
-  /* USER CODE END ETH_MspDeInit 0 */
-    /* Peripheral clock disable */
-    __HAL_RCC_ETH_CLK_DISABLE();
-
-    /**ETH GPIO Configuration
-    PG14     ------> ETH_TXD1
-    PG13     ------> ETH_TXD0
-    PG11     ------> ETH_TX_EN
-    PC1     ------> ETH_MDC
-    PA1     ------> ETH_REF_CLK
-    PC4     ------> ETH_RXD0
-    PA2     ------> ETH_MDIO
-    PC5     ------> ETH_RXD1
-    PA7     ------> ETH_CRS_DV
-    */
-    HAL_GPIO_DeInit(GPIOG, RMII_TXD1_Pin|RMII_TXD0_Pin|RMII_TX_EN_Pin);
-
-    HAL_GPIO_DeInit(GPIOC, RMII_MDC_Pin|RMII_RXD0_Pin|RMII_RXD1_Pin);
-
-    HAL_GPIO_DeInit(GPIOA, RMII_REF_CLK_Pin|RMII_MDIO_Pin|RMII_CRS_DV_Pin);
-
-  /* USER CODE BEGIN ETH_MspDeInit 1 */
-
-  /* USER CODE END ETH_MspDeInit 1 */
   }
 
 }
@@ -1196,28 +1053,6 @@ void HAL_TIM_Base_MspInit(TIM_HandleTypeDef* htim_base)
 
 }
 
-/**
-* @brief TIM_PWM MSP Initialization
-* This function configures the hardware resources used in this example
-* @param htim_pwm: TIM_PWM handle pointer
-* @retval None
-*/
-void HAL_TIM_PWM_MspInit(TIM_HandleTypeDef* htim_pwm)
-{
-  if(htim_pwm->Instance==TIM12)
-  {
-  /* USER CODE BEGIN TIM12_MspInit 0 */
-
-  /* USER CODE END TIM12_MspInit 0 */
-    /* Peripheral clock enable */
-    __HAL_RCC_TIM12_CLK_ENABLE();
-  /* USER CODE BEGIN TIM12_MspInit 1 */
-
-  /* USER CODE END TIM12_MspInit 1 */
-  }
-
-}
-
 void HAL_TIM_MspPostInit(TIM_HandleTypeDef* htim)
 {
   GPIO_InitTypeDef GPIO_InitStruct = {0};
@@ -1226,6 +1061,7 @@ void HAL_TIM_MspPostInit(TIM_HandleTypeDef* htim)
   /* USER CODE BEGIN TIM1_MspPostInit 0 */
 
   /* USER CODE END TIM1_MspPostInit 0 */
+
     __HAL_RCC_GPIOA_CLK_ENABLE();
     /**TIM1 GPIO Configuration
     PA8     ------> TIM1_CH1
@@ -1240,90 +1076,6 @@ void HAL_TIM_MspPostInit(TIM_HandleTypeDef* htim)
   /* USER CODE BEGIN TIM1_MspPostInit 1 */
 
   /* USER CODE END TIM1_MspPostInit 1 */
-  }
-  else if(htim->Instance==TIM2)
-  {
-  /* USER CODE BEGIN TIM2_MspPostInit 0 */
-
-  /* USER CODE END TIM2_MspPostInit 0 */
-
-    __HAL_RCC_GPIOA_CLK_ENABLE();
-    /**TIM2 GPIO Configuration
-    PA15     ------> TIM2_CH1
-    */
-    GPIO_InitStruct.Pin = ARDUINO_PWM_D9_Pin;
-    GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
-    GPIO_InitStruct.Pull = GPIO_NOPULL;
-    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-    GPIO_InitStruct.Alternate = GPIO_AF1_TIM2;
-    HAL_GPIO_Init(ARDUINO_PWM_D9_GPIO_Port, &GPIO_InitStruct);
-
-  /* USER CODE BEGIN TIM2_MspPostInit 1 */
-
-  /* USER CODE END TIM2_MspPostInit 1 */
-  }
-  else if(htim->Instance==TIM3)
-  {
-  /* USER CODE BEGIN TIM3_MspPostInit 0 */
-
-  /* USER CODE END TIM3_MspPostInit 0 */
-
-    __HAL_RCC_GPIOB_CLK_ENABLE();
-    /**TIM3 GPIO Configuration
-    PB4     ------> TIM3_CH1
-    */
-    GPIO_InitStruct.Pin = ARDUINO_PWM_D3_Pin;
-    GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
-    GPIO_InitStruct.Pull = GPIO_NOPULL;
-    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-    GPIO_InitStruct.Alternate = GPIO_AF2_TIM3;
-    HAL_GPIO_Init(ARDUINO_PWM_D3_GPIO_Port, &GPIO_InitStruct);
-
-  /* USER CODE BEGIN TIM3_MspPostInit 1 */
-
-  /* USER CODE END TIM3_MspPostInit 1 */
-  }
-  else if(htim->Instance==TIM5)
-  {
-  /* USER CODE BEGIN TIM5_MspPostInit 0 */
-
-  /* USER CODE END TIM5_MspPostInit 0 */
-
-    __HAL_RCC_GPIOI_CLK_ENABLE();
-    /**TIM5 GPIO Configuration
-    PI0     ------> TIM5_CH4
-    */
-    GPIO_InitStruct.Pin = ARDUINO_PWM_CS_D5_Pin;
-    GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
-    GPIO_InitStruct.Pull = GPIO_NOPULL;
-    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-    GPIO_InitStruct.Alternate = GPIO_AF2_TIM5;
-    HAL_GPIO_Init(ARDUINO_PWM_CS_D5_GPIO_Port, &GPIO_InitStruct);
-
-  /* USER CODE BEGIN TIM5_MspPostInit 1 */
-
-  /* USER CODE END TIM5_MspPostInit 1 */
-  }
-  else if(htim->Instance==TIM12)
-  {
-  /* USER CODE BEGIN TIM12_MspPostInit 0 */
-
-  /* USER CODE END TIM12_MspPostInit 0 */
-
-    __HAL_RCC_GPIOH_CLK_ENABLE();
-    /**TIM12 GPIO Configuration
-    PH6     ------> TIM12_CH1
-    */
-    GPIO_InitStruct.Pin = ARDUINO_PWM_D6_Pin;
-    GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
-    GPIO_InitStruct.Pull = GPIO_NOPULL;
-    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-    GPIO_InitStruct.Alternate = GPIO_AF9_TIM12;
-    HAL_GPIO_Init(ARDUINO_PWM_D6_GPIO_Port, &GPIO_InitStruct);
-
-  /* USER CODE BEGIN TIM12_MspPostInit 1 */
-
-  /* USER CODE END TIM12_MspPostInit 1 */
   }
 
 }
@@ -1389,28 +1141,6 @@ void HAL_TIM_Base_MspDeInit(TIM_HandleTypeDef* htim_base)
   /* USER CODE BEGIN TIM8_MspDeInit 1 */
 
   /* USER CODE END TIM8_MspDeInit 1 */
-  }
-
-}
-
-/**
-* @brief TIM_PWM MSP De-Initialization
-* This function freeze the hardware resources used in this example
-* @param htim_pwm: TIM_PWM handle pointer
-* @retval None
-*/
-void HAL_TIM_PWM_MspDeInit(TIM_HandleTypeDef* htim_pwm)
-{
-  if(htim_pwm->Instance==TIM12)
-  {
-  /* USER CODE BEGIN TIM12_MspDeInit 0 */
-
-  /* USER CODE END TIM12_MspDeInit 0 */
-    /* Peripheral clock disable */
-    __HAL_RCC_TIM12_CLK_DISABLE();
-  /* USER CODE BEGIN TIM12_MspDeInit 1 */
-
-  /* USER CODE END TIM12_MspDeInit 1 */
   }
 
 }
